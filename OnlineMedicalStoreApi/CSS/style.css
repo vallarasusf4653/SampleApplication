@@ -1,0 +1,164 @@
+
+
+body{
+    margin: 50px;
+}
+
+#homePage
+{
+    display: block;
+}
+#HomeButton
+{
+    display: none;
+}
+
+#newUserPage{
+    display: none;
+   
+    border: 1px solid black;
+    margin-top: 7px;
+    padding: 4rem;
+ 
+
+}
+
+#existingUserPage
+{
+    
+    border: 1px solid black;
+    margin-top: 7px;
+    padding: 4rem;
+    display: none;
+    
+}
+#MedicineButton
+{
+    display: none;
+    margin: 8rem;
+}
+#dashBoard{
+    display: none;
+}
+#TopupButton
+{
+display: none;
+margin: 8rem;
+}
+#ShowBalnceButton
+{
+    display: none;
+    margin: 8rem;
+}
+#OrderButton
+{
+    display: none;
+   margin: 8rem;
+}
+#MedicineButtonAdd
+{
+    display: none;
+    margin-left: 8rem;
+    
+}
+#cancelButton
+{
+    display: none;
+   margin: 8rem;
+}
+#PurchaseButton
+{
+    display: none;
+    margin: 8rem;   
+}
+#CountButton
+{
+    display: none;
+    margin: 8rem;   
+}
+#MedicineButtonEdit
+{
+    display: none;
+    margin: 8rem; 
+}
+
+
+/* Navigation Bar*/
+ul {
+    list-style-type: none;
+   position: absolute;
+   left: 20px;
+   
+    bottom: 90% !important;
+    padding: 0 !important;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    width: 80%;
+  }
+ li{
+    color: white;
+    
+    /* width: 10rem; */
+    padding: 1.3rem;
+   
+    text-align: center;
+    font-size: medium;
+    
+ }
+ li:hover
+ {
+    color: #000;
+    background-color: tomato;
+ }
+
+ /*Menu bar 1*/
+ #HomeButton 
+ {
+    display: none;
+   
+    margin: 20%;
+    width: 50%;
+    border: 5px solid tomato;
+    color: whitesmoke;
+    background-color: tomato;
+   border-radius: 0.8rem;
+   box-shadow: 0.4rem 0 0.24rem rgb(115, 114, 113), -0.2rem 0 0.24rem wheat;
+    padding: 10px;
+    text-align: center;
+    
+ }
+ .text
+ {
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 2rem;
+ }
+
+button
+{
+    background-color: salmon;
+    color: black;
+}
+/*Menu Bar 3*/
+
+ /*Menu Bar 3*/
+ #PurchaseButton
+ {
+    display: none;
+ }
+
+ /* .container
+ {
+   
+    margin: 8%;
+   
+    width: 400px;
+    padding: 3rem;
+    
+ } */
+ .title{
+    text-align: center;
+    
+ }

@@ -1,0 +1,219 @@
+<html>
+
+<head>
+    <title> Online Medical Store</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+<div class="container" >
+    <!--First Page-->
+    <div id="homePage">
+        <h2 class="title">Online Medical Store</h2>
+
+        <button style="text-align: center;margin-left: 3rem;" onclick="newUserPage()">Sign UP</button>
+        <button style="text-align: center; margin-left: 5rem;" onclick="existingUserPage()">Sign IN</button>
+
+
+    </div>
+    <div id="newUserPage">
+        <h3>Sign Up </h3>
+
+        <form id="form">
+            <p>
+
+                <label for="newUserName">Name</label><br>
+                <input type="text" id="newUserName" placeholder="Enter your Name"
+                    onkeyup="checkNewUserName('newUserName')">
+                <span id="newUserNameMessage" class="error-message"></span>
+            </p>
+            <p>
+                <label for="newUserEmail">Email</label><br>
+                <input type="text" id="newUserEmail" placeholder="Enter your mail"
+                    onkeyup="checkNewUserEmail('newUserEmail')">
+                <span id="newUserEmailMessage" class="error-message"></span>
+            </p>
+
+            <p>
+                <label for="newUserPassword">Password</label><br>
+                <input type="text" id="newUserPassword" placeholder="Enter your password"
+                    onkeyup="checkNewUserPassword('newUserPassword')">
+                <span id="newUserPasswordMessage" class="error-message"></span>
+            </p>
+            <p>
+                <label for="newUserConfirmPassword">Confirm Password</label><br>
+                <input type="text" id="newUserConfirmPassword" placeholder="Enter your password"
+                    onkeyup="checkNewUserConfirmPassword('newUserConfirmPassword')">
+                <span id="newUserConfirmPasswordMessage" class="error-message"></span>
+            </p>
+            <p>
+                <label for="newUserPhone">Phone Number</label><br>
+                <input type="text" id="newUserPhone" placeholder="Enter your Phone"
+                    onkeyup="checkNewUserPhone('newUserPhone')">
+                <span id="newUserPhoneMessage" class="error-message"></span>
+            </p>
+            <button onclick="SignUp()" type="button">Sign Up</button>
+        </form>
+    </div>
+    <div id="existingUserPage">
+        <h3>Sign In </h3>
+        <form>
+            <p>
+                <label for="existUserEmail">Email</label>
+                <input type="email" id="existUserEmail" onkeyup="checkExistUserEmail('existUserEmail')">
+                <span id="existUserEmailMessage" class="error-message"></span>
+            </p>
+            <p>
+                <label for="existUserPassword">Password</label>
+                <input type="text" id="existUserPassword" onkeyup="checkExistUserPassword('existUserPassword')">
+                <span id="existUserPasswordMessage" class="error-message"></span>
+            </p>
+            <button onclick="SignIn()" type="button">Sign In</button>
+            <button type="reset" value="Cancel">Cancel</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+    <div id="dashBoard">
+
+        <ul>
+            <li class="nav active" onclick="HomeMenu()">Home</li>
+            <li class="nav" onclick="renderContacts()">Medicine Details</li>
+            <li class="nav" onclick="PurchaseItem()">Purchase</li>
+            <li class="nav" onclick="CancelOrder()">Cancel</li>
+            <li class="nav" onclick="RechargeAmount()">Top UP</li>
+            <li class="nav" onclick="ShowBalance()">Show Balance</li>
+            <li class="nav" onclick="OrderHistory()">Order History</li>
+            <li class="nav" onclick="SignOut()">Sign Out</li>
+            
+        </ul>
+    </div>
+
+    <div id="HomeButton">
+        <h2 class="text">Welcome <span id="CurrentUserName"></span></h2>
+
+    </div>
+
+    <div id="MedicineButton">
+        <button type="button" onclick="add()">Add</button>
+        <table id="medicineData" border="1">
+            <thead>
+                <tr>
+                    <th>Medicine Name</th>
+                    <th>Medicine Count</th>
+                    <th>Medicine Price</th>
+                    <th>DateOfExp</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="medicineTableBody">
+                <!--Table data will be inserted here-->
+            </tbody>
+
+        </table>
+
+    </div>
+    <div id="MedicineButtonAdd">
+        <form onsubmit="return false">
+            <p>
+                <input type="text" id="medicineName" placeholder="Medicine Name">
+            </p>
+            <p>
+                <input type="text" id="medicineCount" placeholder="Medicine Count">
+            </p>
+            <p>
+                <input type="text" id="medicinePrice" placeholder="Medicine Price">
+            </p>
+            <p>
+                <input type="date" id="medicineDateOfEp">
+            </p>
+            <button onclick="Submit()">Add</button>
+            <button type="reset" id="cancelBtn">Cancel</button>
+        </form>
+    </div>
+    
+    
+    <div id="PurchaseButton">
+        <table id="medicineData1" border="1">
+            <thead>
+                <tr>
+                    <th>Medicine Name</th>
+                    <th>Medicine Count</th>
+                    <th>Medicine Price</th>
+                    <th>DateOfExp</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <!--Table data will be inserted here-->
+            </tbody>
+            
+
+        </table>
+        </div>
+        <div id="CountButton">
+        
+            <input type="number" id="Count" placeholder="medicine count">
+            <button onclick="PlaceOrder()" id="OrderItem" type="button">Order</button>
+        
+    </div>
+    <div  id="cancelButton">
+
+        <table id="OrderData1" border="1">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Medicine Name</th>
+                    <th>Medicine Count</th>
+                    <th>Total Price</th>
+                    <th>DateOfPurchase</th>
+                    <th>Order Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Table data will be inserted here-->
+            </tbody>
+
+
+        </table>
+    </div>
+
+    <div id="TopupButton">
+        <label for="RechargeAmount">Enter Amount to Recharge</label>
+        <p><input type="number" id="RechargeAmount" placeholder="Enter Amount"></p>
+        <button onclick="RechargeMessage()" type="button">Recharge</button>&nbsp;&nbsp;&nbsp;<span id="amountMessage"
+            style="color: seagreen;"></span>
+    </div>
+    <div id="ShowBalnceButton">
+        <h3>Current Balance = <span id="balance"></span></h3>
+    </div>
+    <div id="OrderButton">
+        <table id="OrderData" border="1">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Medicine Name</th>
+                    <th>Medicine Count</th>
+                    <th>Total Price</th>
+                    <th>DateOfPurchase</th>
+                    <th>Order Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Table data will be inserted here-->
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+
+    <script src="dist/medicalStore.js"></script>
+</body>
+
+</html>
