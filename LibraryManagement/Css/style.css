@@ -1,0 +1,88 @@
+
+body{
+    margin: 50px;
+    width: 100vw;
+}
+
+#header
+{
+   display: block;
+}
+#signup
+{
+   display: none;
+}
+#signin
+{
+   display: none;
+}
+#dashBoard
+{
+   display:none;
+}
+#homeButton
+{
+   display: none;
+   margin: 8rem;
+}
+#BorrowHistoryButton
+{
+   display: none;
+   margin: 15rem;
+}
+#RechargeButton
+{
+   display: none;
+   margin: 15rem;
+}
+#ShowBalanceButton
+{
+   display: none;
+   margin: 15rem;
+}
+#borrowBookButton
+{
+   display: none;
+   margin: 15rem;
+}
+#ReturnBookButton
+{
+   display: none;
+   margin: 15rem;
+}
+
+
+
+
+
+
+
+
+/* Navigation Bar*/
+ul {
+    list-style-type: none;
+   position: absolute;
+   left: 20px;
+   
+    bottom: 90% !important;
+    padding: 0 !important;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    width: 80%;
+  }
+ li{
+    color: white;
+    
+    /* width: 10rem; */
+    padding: 1.3rem;
+   padding-left: 3rem;
+    text-align: center;
+    font-size: medium;
+    
+ }
+ li:hover
+ {
+    color: #000;
+    background-color: tomato;
+ }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Syncfusion Library
+    </title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+
+
+        <div id="header">
+            <button onclick="NewUser()">SIGN UP</button>
+            <button onclick="ExistUser()">SIGN IN</button>
+        </div>
+
+        <div id="signup">
+          
+                <p>
+                    <label for="username">UserName</label><br>
+                    <input type="text" id="username" placeholder="Username">
+                   
+                </p>
+                <p>
+                    <label for="useremail">Email</label><br>
+                    <input type="text" id="useremail" placeholder="Email">
+                
+                </p>
+                <p>
+                    <label for="userpassword">Password</label><br>
+                    <input type="text" id="userpassword" placeholder="Password">
+                      
+                   
+                </p>
+                <p>
+                    <label for="usergender">Gender</label><br>
+                    <input type="text" id="usergender" placeholder="Gender">
+                   
+                    
+                </p>
+                <p>
+                    <label for="userdepartment">Department</label><br>
+                    <input type="text" id="userdepartment" placeholder="Department">
+                   
+                    
+                </p>
+                <p>
+                    <label for="usermobilenumber">Mobile Number</label><br>
+                    <input type="text" id="usermobilenumber" placeholder="mobile number">
+                   
+                    
+                </p>
+                <button type="button" onclick="SignUp()">Sign Up</button>
+           
+        </div>
+        <div id="signin">
+            
+                <p>
+                    <label for="existemail">Email</label><br>
+                    <input type="text" id="existemail" placeholder="Email">
+                </p>
+                <p>
+                    <label for="existpassword">Password</label><br>
+                    <input type="text" id="existpassword" placeholder="Password">
+                       
+                </p>
+                <button type="button" onclick="SignIn()">Sign In</button>
+            
+        </div>
+        <div id="dashBoard">
+
+            <ul>
+                <li class="nav active" onclick="homeMenu()">Home</li>
+                <li class="nav" onclick="renderBorrowbook()">Borrowbook</li>
+                <li class="nav" onclick="borrowHistory()">BorrowHistory</li>
+                <li class="nav" onclick="showReturnBook()">ReturnBooks</li>
+                <li class="nav" onclick="rechargeAmount()">WalletRecharge</li>
+                <li class="nav" onclick="showBalance()">ShowBalance</li>
+                <li class="nav" onclick="SignOut()">Sign Out</li>
+
+            </ul>
+        </div>
+        <div id="homeButton">
+            <h2>Welcome to Syncfusion Library  <span id="username"></span></h2>
+        </div>
+        <div id="borrowBookButton">
+            <table id="BookData" border="1">
+                <thead>
+                    <tr>
+                        <th>S.NO</th>
+                        <th>Book Name</th>
+                        <th>Author Name</th>
+                        <th>BookCount</th>
+                        <th>Action</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Table data will be inserted here-->
+                </tbody>
+    
+    
+            </table>
+        </div>
+        <div id="ReturnBookButton">
+            <table id="returnBookData" border="1">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Book ID</th>
+                        <th>BorrowedDate</th>
+                        <th>BorrowbookCount</th>
+                        <th>Status</th>
+                        <th>Return</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Table data will be inserted here-->
+                </tbody>
+    
+    
+            </table>
+        </div>
+        <div id="BorrowHistoryButton">
+            <table id="BorrowHistoryData" border="1">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Book ID</th>
+                        <th>User ID</th>
+                        <th>BorrowedDate</th>
+                        <th>BorrowbookCount</th>
+                        <th>Status</th>
+                        <th>PaidFineAmount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Table data will be inserted here-->
+                </tbody>
+    
+    
+            </table>
+        </div>
+        <div id="RechargeButton">
+            
+                <label for="RechargeAmount">Enter Amount to Recharge</label>
+                <p><input type="number" id="RechargeAmount" placeholder="Enter Amount"></p>
+                <button onclick="RechargeMessage()" type="button">Recharge</button>&nbsp;&nbsp;&nbsp;<span id="amountMessage"style="color: seagreen;"></span>
+           
+        </div>
+        <div id="ShowBalanceButton">
+                 <h4>Current Balance : <span id="showBalance"></span></h4>
+        </div>
+
+
+        <script src="Js/script.js"></script>
+</body>
+
+</html>
