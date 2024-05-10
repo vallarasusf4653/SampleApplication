@@ -1,0 +1,160 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(238, 245, 255);
+
+}
+
+#header {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid;
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 5%;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0.2rem 0 0 0.2rem silver
+}
+
+button {
+    background-color: tomato;
+    font-size: medium;
+   
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*SignUp*/
+
+#signUp {
+    border-radius: 10px;
+    text-align: left;
+    display: none;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0.2rem -0.2rem 0.2rem silver, -0.2rem 0.2rem 0.2rem silver
+}
+
+input {
+
+    text-align: left;
+
+    padding-bottom: 6px;
+    border-radius: 8px;
+    margin: 8px;
+    width: 250px;
+    padding: 10px;
+}
+
+#signIn {
+    border-radius: 10px;
+    display: none;
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0.2rem -0.2rem 0.2rem silver, -0.2rem 0.2rem 0.2rem silver
+}
+
+#navBar {
+    display: none;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    width: 100%;
+}
+
+li {
+    padding: 17px 25px;
+    background-color: rgb(90, 87, 87);
+    color: white;
+    font-size: medium;
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+li:hover {
+    background-color: tomato;
+}
+
+
+/*Nav Bar Button*/
+
+#homeButton {
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+#stockButton {
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+#StockButtonAdd
+{
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+#purchaseButton {
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+#cartButton {
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+#topupButton {
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+#showBalanceButton {
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+#signOutButton {
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+#add
+{
+    justify-content: left;
+}
+
+#stockData,th,td
+{
+    border: 1px solid;
+    font-size: medium;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left;
+    margin-left: 20px;
+    border-radius: 0.3rem;
+}

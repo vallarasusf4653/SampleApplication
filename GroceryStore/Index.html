@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+
+
+    <div id="header">
+        <button onclick="newUser()">SignUp</button>
+        <button onclick="existUser()">SignIn</button>
+        <div id="signUp">
+            <p>
+                <label for="UserName">User Name</label><br>
+                <input type="text" id="userName">
+            </p>
+            <p>
+                <label for="UserEmail">Email</label><br>
+                <input type="text" id="userEmail">
+            </p>
+            <p>
+                <label for="userPassword">Password</label><br>
+                <input type="text" id="userPassword">
+            </p>
+            <p>
+                <label for="UserPhone">Phone Number</label><br>
+                <input type="text" id="userPhone">
+            </p>
+            <p>
+                <label for="UserImage">Upload Profile Picture</label><br>
+                <input type="file" id="userImage" accept="image/*">
+            </p>
+            <button onclick="signUp()">Sign Up</button>
+
+        </div>
+        <div id="signIn">
+            <p>
+                <label for="existEmail">Email</label><br>
+                <input type="text" id="existEmail">
+            </p>
+            <p>
+                <label for="existPassword">Password</label><br>
+                <input type="password" id="existPassword">
+            </p>
+            <button onclick="signIn()">Sign IN</button>
+        </div>
+    </div>
+
+    <div id="navBar">
+        <ul>
+            <li onclick="homeButton()">Home</li>
+            <li onclick="stockButton()">Stock</li>
+            <li onclick="purchaseButton()">Purchase</li>
+            <li onclick="cartButton()">CartItem</li>
+            <li onclick="orderButton()">OrderHistory</li>
+            <li onclick="topUpButton()">TopUp</li>
+            <li onclick="showBalanceButton()">ShowBalance</li>
+            <li onclick="signOutButton()">SignOut</li>
+        </ul>
+    </div>
+
+    <div id="homeButton">
+        <h3> Welcome to Online Grocery Store</h3>
+
+<div id="photo">
+    <table id="data">
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+       
+
+
+    </div>
+    <div id="stockButton">
+        <button onclick="add()">ADD</button>
+        <table id="stockData">
+
+            <thead>
+              
+                    <th>ProductName</th>
+                    <th>Product Count</th>
+                    <th>Product Price</th>
+                    <th>Date of Purchase</th>
+                    <th>Date Of Expiry</th>
+                    <th>ProductImage</th>
+                    <th>Action</th>
+               
+            </thead>
+            <tbody id="stockDatatableBody">
+
+            </tbody>
+
+        </table>
+    </div>
+    <div id="StockButtonAdd">
+        <form onsubmit="return false">
+            <p>
+                <input type="text" id="productName" placeholder="Product Name">
+            </p>
+            <p>
+                <input type="number" id="productCount" placeholder="Product Count">
+            </p>
+            <p>
+                <input type="number" id="ProductPrice" placeholder="Product Price">
+            </p>
+            <p>
+                <input type="date" id="dateOfEpiry">
+            </p>
+            <p>
+                <input type="date" id="dateOfPurchase">
+            </p>
+            <p>
+                <input type="file" id="ProductImage" accept="image/*">
+            </p>
+            <button onclick="Submit()">Add</button>
+            <button type="reset" id="cancelBtn">Cancel</button>
+        </form>
+    </div>
+    <div id="purchaseButton">
+
+        <table id="PurchaseData">
+
+            <thead>
+              
+                    <th>ProductName</th>
+                    <th>Product Count</th>
+                    <th>Product Price</th>
+                    <th>Date of Purchase</th>
+                    <th>Date Of Expiry</th>
+                    <th>ProductImage</th>
+                    <th>Action</th>
+               
+            </thead>
+            <tbody id="purchaseProduct">
+
+            </tbody>
+
+        </table>
+
+    </div>
+    <div id="cartButton">
+
+    </div>
+    <div id="orderButton">
+
+    </div>
+    <div id="topupButton">
+        <label for="RechargeAmount">Enter Amount to Recharge</label>
+        <p><input type="number" id="RechargeAmount" placeholder="Enter Amount"></p>
+        <button onclick="RechargeMessage()" type="button">Recharge</button>&nbsp;&nbsp;&nbsp;<span id="amountMessage"
+            style="color: seagreen;"></span>
+    </div>
+    <div id="showBalanceButton">
+<h3>Current Balance <span id="balance"> </span></h3>
+    </div>
+    <div id="signOutButton">
+
+    </div>
+    <script src="Js/grocery.js"></script>
+</body>
+
+</html>
